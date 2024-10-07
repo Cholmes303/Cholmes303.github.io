@@ -23,21 +23,20 @@
     </style>
     <script>
 
-	// Function to change the background color
-	function changeBackgroundColor() {
-	    const colors = ['#ff9988', '#99ff99', '#9999ff', '#ffff99'];
-	    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-	    document.body.style.backgroundColor = randomColor;
-	}
-	
-	// Function to display a welcome message
-	function displayWelcomeMessage() {
+    // Function to display a welcome message
+    function displayWelcomeMessage() {
 	    const name = prompt("What is your name?");
 	    if (name) {
 	        alert(`Welcome to the diddy party, ${name}!`);
 	    } 
 	}
-    
+
+	// Function to change the background color
+	function changeBackgroundColor() {
+	    const colors = ['#ff9988', '#99ff99', '#9999ff', '#ffff99', '000000'];
+	    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+	    document.body.style.backgroundColor = randomColor;
+	}
 
 	// Add event listeners when the page loads
 	window.onload = function() {
