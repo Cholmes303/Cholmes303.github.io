@@ -37,17 +37,47 @@
 	        alert(`Welcome to the diddy party, ${name}!`);
 	    } 
 	}
-	
+    
+
 	// Add event listeners when the page loads
 	window.onload = function() {
 	  	changeBackgroundColor();
 	    displayWelcomeMessage();
 	};
+
+    function getFortune() {
+    // create a list of random fortunes
+    const fortunes = [
+        "Caiden is waiting for you...",
+        "Matteo wants you.",
+        "Mr. Flower will learn of the sigma ways.",
+        "You will recieve bad news soon."
+    ];
+    
+    // select a random value from the `fortunes` array
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    
+    // post an alert that displays the random fortune
+    alert(fortunes[randomIndex]);
+    }
+
+    // Add this to your existing JavaScript
+    function playBackgroundMusic() {
+        var audio = new Audio('mixkit-dog-barking-twice-1.wav');
+        audio.loop = true;
+        audio.play();
+    }
+
+    // Modify your window.onload function
+    window.onload = function() {
+        playBackgroundMusic();
+    };
     </script>
 </head>
 
 <body>
     <h1>Common lang today</h1>
+    <button onclick="getFortune()">Get Your Fortune</button>
     <p>We will be listing the top slang terms in a ordered list</p>
     <h2>List</h2>
     <ol>
@@ -57,6 +87,7 @@
         <li>Skibidi (The Mr. Flower special)</li>
         <li>Gyatt (The Matteo special)</li>
     </ol>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
     <p>Now we will have an unordered list of other terms</p>
     <h3>Unordered list</h3>
     <ul>
@@ -78,7 +109,7 @@
     <img src="Sigma-grindset-patrick-bateman.webp" alt="Sigma Paterick Bateman" width="200" height="600">
     <img src="Sigma-grindset-patrick-bateman.webp" alt="Sigma Paterick Bateman" width="200" height="600">
     
-    <p>Here are some FIRE links</p>
+    <p>Here are some <a href="https://www.istockphoto.com/photos/fire">FIRE</a> links</p>
     <a href="https://therealworld.net/" target="_blank">How to get rich</a>
     <a href="https://www.youtube.com/watch?v=BSILPBXUqTM">How to become Sigma</a>
     <a href="https://brodybroughton.github.io/" target="_blank">Check out this SKIBIDI RIZZLER</a>
