@@ -21,6 +21,29 @@
             line-height: 2.0;
         }
     </style>
+    <script>
+
+	// Function to change the background color
+	function changeBackgroundColor() {
+	    const colors = ['#ff9988', '#99ff99', '#9999ff', '#ffff99'];
+	    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+	    document.body.style.backgroundColor = randomColor;
+	}
+	
+	// Function to display a welcome message
+	function displayWelcomeMessage() {
+	    const name = prompt("What is your name?");
+	    if (name) {
+	        alert(`Welcome to the best website, ${name}`);
+	    } 
+	}
+	
+	// Add event listeners when the page loads
+	window.onload = function() {
+	  	changeBackgroundColor();
+	    displayWelcomeMessage();
+	};
+    </script>
 </head>
 
 <body>
