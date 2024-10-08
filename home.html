@@ -22,7 +22,6 @@
         }
     </style>
     <script>
-
     // Function to display a welcome message
     function displayWelcomeMessage() {
 	    const name = prompt("What is your name?");
@@ -30,20 +29,12 @@
 	        alert(`Welcome to the diddy party, ${name}!`);
 	    } 
 	}
-
 	// Function to change the background color
 	function changeBackgroundColor() {
 	    const colors = ['#ff9988', '#99ff99', '#9999ff', '#ffff99', '000000'];
 	    const randomColor = colors[Math.floor(Math.random() * colors.length)];
 	    document.body.style.backgroundColor = randomColor;
 	}
-
-	// Add event listeners when the page loads
-	window.onload = function() {
-	  	changeBackgroundColor();
-	    displayWelcomeMessage();
-	};
-
     function getFortune() {
     // create a list of random fortunes
     const fortunes = [
@@ -52,28 +43,25 @@
         "Mr. Flower will learn of the sigma ways.",
         "You will recieve bad news soon."
     ];
-    
     // select a random value from the `fortunes` array
     const randomIndex = Math.floor(Math.random() * fortunes.length);
-    
     // post an alert that displays the random fortune
     alert(fortunes[randomIndex]);
     }
-
     // Add this to your existing JavaScript
     function playBackgroundMusic() {
         var audio = new Audio('mixkit-dog-barking-twice-1.wav');
         audio.loop = true;
         audio.play();
     }
-
     // Modify your window.onload function
     window.onload = function() {
         playBackgroundMusic();
+        changeBackgroundColor();
+	    displayWelcomeMessage();
     };
     </script>
 </head>
-
 <body>
     <h1>Common lang today</h1>
     <button onclick="getFortune()">Get Your Fortune</button>

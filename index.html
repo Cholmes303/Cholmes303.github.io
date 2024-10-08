@@ -2,8 +2,22 @@
 <html>
 <head>
     <title>Cristian Holmes</title>
+    <script>
+        function toggleDarkMode() {
+        // add the `dark-mode` class to your `<body>` tag
+        document.body.classList.toggle('dark-mode');
+    }
+    </script>
+    <style>
+    /* set the background color to dark gray and text color to white */
+    .dark-mode {
+        background-color: #0a0a0a;
+        color: #fff;
+}
+    </style>
 </head>
 <body>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
     <h1>About Me</h1>
     <p>I am Cristian Holmes.
          I am a cybersecurity student at Warren Tech. 
